@@ -1,0 +1,17 @@
+<h1>All Users</h1>
+
+<table>
+    <tr>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Articles</th>
+    </tr>
+    
+    <% @users.each do |user|%>
+    <tr>
+        <td><%= link_to user.username, user_path(user) %></td>
+        <td><%= user.email %></td>
+        <td><%= pluralize(user.articles.count, "article") if user.articles %></td>
+    </tr>
+    <% end %>
+</table>
