@@ -2,5 +2,11 @@
 <p>
     <%= link_to "Create new article", new_article_path %>
 </p>
+<div>
+    <%= will_paginate %>
+</div>
 
 <%= render 'article', obj: @articles%>
+<div>
+    <%= will_paginate %>
+</div>
